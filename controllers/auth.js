@@ -17,6 +17,7 @@ export const login = async (req, res) => {
         expires: new Date(Date.now() + 86400000),
         secure: true,
         httpOnly: true,
+        sameSite: "None",
       });
 
       return res.status(response.status).json({ data: response.data.user });
