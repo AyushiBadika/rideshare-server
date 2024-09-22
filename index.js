@@ -24,6 +24,6 @@ app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
 
-app.use("/test", (req, res) => {
-  res.json(req.cookies);
+app.use("/", (req, res) => {
+  res.send("Welcome to the ride-share Server");
 });
